@@ -1,25 +1,30 @@
-# Hi, I'm Jamal 👋
+# AWS Resource Tagging Automation
 
-💼 **Senior DevOps Engineer | Salesforce Release Specialist | Cloud Automation Expert**  
-🚀 AWS | Azure DevOps | Jenkins | Gearset | Terraform | Docker | Python  
+A lightweight **Python-based automation script** to tag AWS resources across all regions and services with consistent metadata for cost allocation, compliance, and tracking.
 
-I help teams automate CI/CD pipelines, optimize cloud costs, and deploy Salesforce metadata efficiently using tools like Gearset and Salesforce Code Analyzer.
+## 🚀 Overview
+This project automates the process of adding or updating tags (such as `Environment`, `Owner`, `CostCenter`, or `map-migrated`) on AWS resources like:
+- EC2 Instances
+- S3 Buckets
+- RDS Instances
+- EBS Volumes
+- Elastic Load Balancers
 
-## 🔧 My Technical Expertise
-- **Cloud Platforms:** AWS (ECS, RDS, IAM, Lambda), Azure  
-- **CI/CD Tools:** Jenkins, Bitbucket Pipelines, Azure DevOps, GitHub Actions  
-- **Salesforce DevOps:** Gearset, Copado, Salesforce Code Analyzer (SFCA)  
-- **Infrastructure as Code:** Terraform, CloudFormation  
-- **Languages:** Python, Bash  
-- **Monitoring:** CloudWatch, Grafana, Prometheus  
-
-## 📘 Featured Projects
-| Project | Description |
-|----------|--------------|
-| [terraform_sandbox](https://github.com/jamalmo2/terraform_sandbox) | Example IaC configurations for AWS environments |
-| [workspace](https://github.com/jamalmo2/workspace) | Dockerized CI/CD sandbox for testing build automation |
-| [aws-tagging-automation](#) | Python script to auto-tag AWS resources for cost optimization (coming soon) |
+The script uses the **boto3** library and supports multi-region tagging.
 
 ---
-🧩 **Open to short-term DevOps and Salesforce automation projects.**  
-Let’s collaborate: [LinkedIn](https://linkedin.com/in/jamalaweismohamed)
+
+## 🧩 Features
+✅ Automatically discovers AWS resources  
+✅ Tags untagged or incorrectly tagged resources  
+✅ Supports multiple AWS regions  
+✅ Configurable tag key-value pairs  
+✅ Error handling and logging included  
+
+---
+
+## ⚙️ Prerequisites
+- Python 3.8+
+- AWS credentials configured via CLI or environment variables  
+  ```bash
+  aws configure
